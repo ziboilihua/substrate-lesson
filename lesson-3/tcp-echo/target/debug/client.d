@@ -1,1 +1,1 @@
-/home/ubuntu/substrate-lesson/tcp-echo/target/debug/client: /home/ubuntu/substrate-lesson/tcp-echo/src/bin/client.rs
+/home/franktly/substrate-lesson/lesson-3/tcp-echo/target/debug/client: /home/franktly/substrate-lesson/lesson-3/tcp-echo/src/bin/client.rs

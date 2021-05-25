@@ -1,5 +1,6 @@
 use std::io::{Read, Write};
 use std::net::{Shutdown, TcpListener, TcpStream};
+use std::str::from_utf8;
 use std::thread;
 
 // echo data which are recieved from client back to client
@@ -11,6 +12,8 @@ fn echo(mut stream: TcpStream) {
     while match stream.read(&mut data) {
         // if read correctly, write back data to client
         Ok(size) => {
+            let recv_data = from_utf8(&data).unwrap();
+            println!("server recv: {}", recv_data);
             stream.write(&data[0..size]).unwrap();
             true
         }
