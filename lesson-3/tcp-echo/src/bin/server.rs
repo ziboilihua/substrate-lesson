@@ -15,7 +15,7 @@ fn echo(mut stream: TcpStream) {
             let recv_data = from_utf8(&data).unwrap();
             println!("server recv: {}", recv_data);
             stream.write(&data[0..size]).unwrap();
-            true
+            true // size == MAX_BUFFER_LEN
         }
 
         // if error occurs, shutdown tcp stream
